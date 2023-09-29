@@ -1,582 +1,115 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var _exportNames = {
-  react: true,
-  assertNode: true,
-  createTypeAnnotationBasedOnTypeof: true,
-  createUnionTypeAnnotation: true,
-  createFlowUnionType: true,
-  createTSUnionType: true,
-  cloneNode: true,
-  clone: true,
-  cloneDeep: true,
-  cloneDeepWithoutLoc: true,
-  cloneWithoutLoc: true,
-  addComment: true,
-  addComments: true,
-  inheritInnerComments: true,
-  inheritLeadingComments: true,
-  inheritsComments: true,
-  inheritTrailingComments: true,
-  removeComments: true,
-  ensureBlock: true,
-  toBindingIdentifierName: true,
-  toBlock: true,
-  toComputedKey: true,
-  toExpression: true,
-  toIdentifier: true,
-  toKeyAlias: true,
-  toSequenceExpression: true,
-  toStatement: true,
-  valueToNode: true,
-  appendToMemberExpression: true,
-  inherits: true,
-  prependToMemberExpression: true,
-  removeProperties: true,
-  removePropertiesDeep: true,
-  removeTypeDuplicates: true,
-  getBindingIdentifiers: true,
-  getOuterBindingIdentifiers: true,
-  traverse: true,
-  traverseFast: true,
-  shallowEqual: true,
-  is: true,
-  isBinding: true,
-  isBlockScoped: true,
-  isImmutable: true,
-  isLet: true,
-  isNode: true,
-  isNodesEquivalent: true,
-  isPlaceholderType: true,
-  isReferenced: true,
-  isScope: true,
-  isSpecifierDefault: true,
-  isType: true,
-  isValidES3Identifier: true,
-  isValidIdentifier: true,
-  isVar: true,
-  matchesPattern: true,
-  validate: true,
-  buildMatchMemberExpression: true,
-  __internal__deprecationWarning: true
-};
-Object.defineProperty(exports, "__internal__deprecationWarning", {
-  enumerable: true,
-  get: function () {
-    return _deprecationWarning.default;
-  }
-});
-Object.defineProperty(exports, "addComment", {
-  enumerable: true,
-  get: function () {
-    return _addComment.default;
-  }
-});
-Object.defineProperty(exports, "addComments", {
-  enumerable: true,
-  get: function () {
-    return _addComments.default;
-  }
-});
-Object.defineProperty(exports, "appendToMemberExpression", {
-  enumerable: true,
-  get: function () {
-    return _appendToMemberExpression.default;
-  }
-});
-Object.defineProperty(exports, "assertNode", {
-  enumerable: true,
-  get: function () {
-    return _assertNode.default;
-  }
-});
-Object.defineProperty(exports, "buildMatchMemberExpression", {
-  enumerable: true,
-  get: function () {
-    return _buildMatchMemberExpression.default;
-  }
-});
-Object.defineProperty(exports, "clone", {
-  enumerable: true,
-  get: function () {
-    return _clone.default;
-  }
-});
-Object.defineProperty(exports, "cloneDeep", {
-  enumerable: true,
-  get: function () {
-    return _cloneDeep.default;
-  }
-});
-Object.defineProperty(exports, "cloneDeepWithoutLoc", {
-  enumerable: true,
-  get: function () {
-    return _cloneDeepWithoutLoc.default;
-  }
-});
-Object.defineProperty(exports, "cloneNode", {
-  enumerable: true,
-  get: function () {
-    return _cloneNode.default;
-  }
-});
-Object.defineProperty(exports, "cloneWithoutLoc", {
-  enumerable: true,
-  get: function () {
-    return _cloneWithoutLoc.default;
-  }
-});
-Object.defineProperty(exports, "createFlowUnionType", {
-  enumerable: true,
-  get: function () {
-    return _createFlowUnionType.default;
-  }
-});
-Object.defineProperty(exports, "createTSUnionType", {
-  enumerable: true,
-  get: function () {
-    return _createTSUnionType.default;
-  }
-});
-Object.defineProperty(exports, "createTypeAnnotationBasedOnTypeof", {
-  enumerable: true,
-  get: function () {
-    return _createTypeAnnotationBasedOnTypeof.default;
-  }
-});
-Object.defineProperty(exports, "createUnionTypeAnnotation", {
-  enumerable: true,
-  get: function () {
-    return _createFlowUnionType.default;
-  }
-});
-Object.defineProperty(exports, "ensureBlock", {
-  enumerable: true,
-  get: function () {
-    return _ensureBlock.default;
-  }
-});
-Object.defineProperty(exports, "getBindingIdentifiers", {
-  enumerable: true,
-  get: function () {
-    return _getBindingIdentifiers.default;
-  }
-});
-Object.defineProperty(exports, "getOuterBindingIdentifiers", {
-  enumerable: true,
-  get: function () {
-    return _getOuterBindingIdentifiers.default;
-  }
-});
-Object.defineProperty(exports, "inheritInnerComments", {
-  enumerable: true,
-  get: function () {
-    return _inheritInnerComments.default;
-  }
-});
-Object.defineProperty(exports, "inheritLeadingComments", {
-  enumerable: true,
-  get: function () {
-    return _inheritLeadingComments.default;
-  }
-});
-Object.defineProperty(exports, "inheritTrailingComments", {
-  enumerable: true,
-  get: function () {
-    return _inheritTrailingComments.default;
-  }
-});
-Object.defineProperty(exports, "inherits", {
-  enumerable: true,
-  get: function () {
-    return _inherits.default;
-  }
-});
-Object.defineProperty(exports, "inheritsComments", {
-  enumerable: true,
-  get: function () {
-    return _inheritsComments.default;
-  }
-});
-Object.defineProperty(exports, "is", {
-  enumerable: true,
-  get: function () {
-    return _is.default;
-  }
-});
-Object.defineProperty(exports, "isBinding", {
-  enumerable: true,
-  get: function () {
-    return _isBinding.default;
-  }
-});
-Object.defineProperty(exports, "isBlockScoped", {
-  enumerable: true,
-  get: function () {
-    return _isBlockScoped.default;
-  }
-});
-Object.defineProperty(exports, "isImmutable", {
-  enumerable: true,
-  get: function () {
-    return _isImmutable.default;
-  }
-});
-Object.defineProperty(exports, "isLet", {
-  enumerable: true,
-  get: function () {
-    return _isLet.default;
-  }
-});
-Object.defineProperty(exports, "isNode", {
-  enumerable: true,
-  get: function () {
-    return _isNode.default;
-  }
-});
-Object.defineProperty(exports, "isNodesEquivalent", {
-  enumerable: true,
-  get: function () {
-    return _isNodesEquivalent.default;
-  }
-});
-Object.defineProperty(exports, "isPlaceholderType", {
-  enumerable: true,
-  get: function () {
-    return _isPlaceholderType.default;
-  }
-});
-Object.defineProperty(exports, "isReferenced", {
-  enumerable: true,
-  get: function () {
-    return _isReferenced.default;
-  }
-});
-Object.defineProperty(exports, "isScope", {
-  enumerable: true,
-  get: function () {
-    return _isScope.default;
-  }
-});
-Object.defineProperty(exports, "isSpecifierDefault", {
-  enumerable: true,
-  get: function () {
-    return _isSpecifierDefault.default;
-  }
-});
-Object.defineProperty(exports, "isType", {
-  enumerable: true,
-  get: function () {
-    return _isType.default;
-  }
-});
-Object.defineProperty(exports, "isValidES3Identifier", {
-  enumerable: true,
-  get: function () {
-    return _isValidES3Identifier.default;
-  }
-});
-Object.defineProperty(exports, "isValidIdentifier", {
-  enumerable: true,
-  get: function () {
-    return _isValidIdentifier.default;
-  }
-});
-Object.defineProperty(exports, "isVar", {
-  enumerable: true,
-  get: function () {
-    return _isVar.default;
-  }
-});
-Object.defineProperty(exports, "matchesPattern", {
-  enumerable: true,
-  get: function () {
-    return _matchesPattern.default;
-  }
-});
-Object.defineProperty(exports, "prependToMemberExpression", {
-  enumerable: true,
-  get: function () {
-    return _prependToMemberExpression.default;
-  }
-});
-exports.react = void 0;
-Object.defineProperty(exports, "removeComments", {
-  enumerable: true,
-  get: function () {
-    return _removeComments.default;
-  }
-});
-Object.defineProperty(exports, "removeProperties", {
-  enumerable: true,
-  get: function () {
-    return _removeProperties.default;
-  }
-});
-Object.defineProperty(exports, "removePropertiesDeep", {
-  enumerable: true,
-  get: function () {
-    return _removePropertiesDeep.default;
-  }
-});
-Object.defineProperty(exports, "removeTypeDuplicates", {
-  enumerable: true,
-  get: function () {
-    return _removeTypeDuplicates.default;
-  }
-});
-Object.defineProperty(exports, "shallowEqual", {
-  enumerable: true,
-  get: function () {
-    return _shallowEqual.default;
-  }
-});
-Object.defineProperty(exports, "toBindingIdentifierName", {
-  enumerable: true,
-  get: function () {
-    return _toBindingIdentifierName.default;
-  }
-});
-Object.defineProperty(exports, "toBlock", {
-  enumerable: true,
-  get: function () {
-    return _toBlock.default;
-  }
-});
-Object.defineProperty(exports, "toComputedKey", {
-  enumerable: true,
-  get: function () {
-    return _toComputedKey.default;
-  }
-});
-Object.defineProperty(exports, "toExpression", {
-  enumerable: true,
-  get: function () {
-    return _toExpression.default;
-  }
-});
-Object.defineProperty(exports, "toIdentifier", {
-  enumerable: true,
-  get: function () {
-    return _toIdentifier.default;
-  }
-});
-Object.defineProperty(exports, "toKeyAlias", {
-  enumerable: true,
-  get: function () {
-    return _toKeyAlias.default;
-  }
-});
-Object.defineProperty(exports, "toSequenceExpression", {
-  enumerable: true,
-  get: function () {
-    return _toSequenceExpression.default;
-  }
-});
-Object.defineProperty(exports, "toStatement", {
-  enumerable: true,
-  get: function () {
-    return _toStatement.default;
-  }
-});
-Object.defineProperty(exports, "traverse", {
-  enumerable: true,
-  get: function () {
-    return _traverse.default;
-  }
-});
-Object.defineProperty(exports, "traverseFast", {
-  enumerable: true,
-  get: function () {
-    return _traverseFast.default;
-  }
-});
-Object.defineProperty(exports, "validate", {
-  enumerable: true,
-  get: function () {
-    return _validate.default;
-  }
-});
-Object.defineProperty(exports, "valueToNode", {
-  enumerable: true,
-  get: function () {
-    return _valueToNode.default;
-  }
-});
-var _isReactComponent = require("./validators/react/isReactComponent");
-var _isCompatTag = require("./validators/react/isCompatTag");
-var _buildChildren = require("./builders/react/buildChildren");
-var _assertNode = require("./asserts/assertNode");
-var _generated = require("./asserts/generated");
-Object.keys(_generated).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _generated[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _generated[key];
-    }
-  });
-});
-var _createTypeAnnotationBasedOnTypeof = require("./builders/flow/createTypeAnnotationBasedOnTypeof");
-var _createFlowUnionType = require("./builders/flow/createFlowUnionType");
-var _createTSUnionType = require("./builders/typescript/createTSUnionType");
-var _generated2 = require("./builders/generated");
-Object.keys(_generated2).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _generated2[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _generated2[key];
-    }
-  });
-});
-var _uppercase = require("./builders/generated/uppercase");
-Object.keys(_uppercase).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _uppercase[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _uppercase[key];
-    }
-  });
-});
-var _cloneNode = require("./clone/cloneNode");
-var _clone = require("./clone/clone");
-var _cloneDeep = require("./clone/cloneDeep");
-var _cloneDeepWithoutLoc = require("./clone/cloneDeepWithoutLoc");
-var _cloneWithoutLoc = require("./clone/cloneWithoutLoc");
-var _addComment = require("./comments/addComment");
-var _addComments = require("./comments/addComments");
-var _inheritInnerComments = require("./comments/inheritInnerComments");
-var _inheritLeadingComments = require("./comments/inheritLeadingComments");
-var _inheritsComments = require("./comments/inheritsComments");
-var _inheritTrailingComments = require("./comments/inheritTrailingComments");
-var _removeComments = require("./comments/removeComments");
-var _generated3 = require("./constants/generated");
-Object.keys(_generated3).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _generated3[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _generated3[key];
-    }
-  });
-});
-var _constants = require("./constants");
-Object.keys(_constants).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _constants[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _constants[key];
-    }
-  });
-});
-var _ensureBlock = require("./converters/ensureBlock");
-var _toBindingIdentifierName = require("./converters/toBindingIdentifierName");
-var _toBlock = require("./converters/toBlock");
-var _toComputedKey = require("./converters/toComputedKey");
-var _toExpression = require("./converters/toExpression");
-var _toIdentifier = require("./converters/toIdentifier");
-var _toKeyAlias = require("./converters/toKeyAlias");
-var _toSequenceExpression = require("./converters/toSequenceExpression");
-var _toStatement = require("./converters/toStatement");
-var _valueToNode = require("./converters/valueToNode");
-var _definitions = require("./definitions");
-Object.keys(_definitions).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _definitions[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _definitions[key];
-    }
-  });
-});
-var _appendToMemberExpression = require("./modifications/appendToMemberExpression");
-var _inherits = require("./modifications/inherits");
-var _prependToMemberExpression = require("./modifications/prependToMemberExpression");
-var _removeProperties = require("./modifications/removeProperties");
-var _removePropertiesDeep = require("./modifications/removePropertiesDeep");
-var _removeTypeDuplicates = require("./modifications/flow/removeTypeDuplicates");
-var _getBindingIdentifiers = require("./retrievers/getBindingIdentifiers");
-var _getOuterBindingIdentifiers = require("./retrievers/getOuterBindingIdentifiers");
-var _traverse = require("./traverse/traverse");
-Object.keys(_traverse).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _traverse[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _traverse[key];
-    }
-  });
-});
-var _traverseFast = require("./traverse/traverseFast");
-var _shallowEqual = require("./utils/shallowEqual");
-var _is = require("./validators/is");
-var _isBinding = require("./validators/isBinding");
-var _isBlockScoped = require("./validators/isBlockScoped");
-var _isImmutable = require("./validators/isImmutable");
-var _isLet = require("./validators/isLet");
-var _isNode = require("./validators/isNode");
-var _isNodesEquivalent = require("./validators/isNodesEquivalent");
-var _isPlaceholderType = require("./validators/isPlaceholderType");
-var _isReferenced = require("./validators/isReferenced");
-var _isScope = require("./validators/isScope");
-var _isSpecifierDefault = require("./validators/isSpecifierDefault");
-var _isType = require("./validators/isType");
-var _isValidES3Identifier = require("./validators/isValidES3Identifier");
-var _isValidIdentifier = require("./validators/isValidIdentifier");
-var _isVar = require("./validators/isVar");
-var _matchesPattern = require("./validators/matchesPattern");
-var _validate = require("./validators/validate");
-var _buildMatchMemberExpression = require("./validators/buildMatchMemberExpression");
-var _generated4 = require("./validators/generated");
-Object.keys(_generated4).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _generated4[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _generated4[key];
-    }
-  });
-});
-var _generated5 = require("./ast-types/generated");
-Object.keys(_generated5).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-  if (key in exports && exports[key] === _generated5[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _generated5[key];
-    }
-  });
-});
-var _deprecationWarning = require("./utils/deprecationWarning");
-const react = {
-  isReactComponent: _isReactComponent.default,
-  isCompatTag: _isCompatTag.default,
-  buildChildren: _buildChildren.default
-};
-exports.react = react;
-
-//# sourceMappingURL=index.js.map
+export { Html } from './web/Html.js';
+export { CycleRaycast } from './web/CycleRaycast.js';
+export { useCursor } from './web/useCursor.js';
+export { Loader } from './web/Loader.js';
+export { Scroll, ScrollControls, useScroll } from './web/ScrollControls.js';
+export { PresentationControls } from './web/PresentationControls.js';
+export { KeyboardControls, useKeyboardControls } from './web/KeyboardControls.js';
+export { Select, useSelect } from './web/Select.js';
+export { Billboard } from './core/Billboard.js';
+export { ScreenSpace } from './core/ScreenSpace.js';
+export { QuadraticBezierLine } from './core/QuadraticBezierLine.js';
+export { CubicBezierLine } from './core/CubicBezierLine.js';
+export { CatmullRomLine } from './core/CatmullRomLine.js';
+export { Line } from './core/Line.js';
+export { PositionalAudio } from './core/PositionalAudio.js';
+export { Text } from './core/Text.js';
+export { Text3D } from './core/Text3D.js';
+export { Effects, isWebGL2Available } from './core/Effects.js';
+export { GradientTexture } from './core/GradientTexture.js';
+export { Image } from './core/Image.js';
+export { Edges } from './core/Edges.js';
+export { Trail, useTrail } from './core/Trail.js';
+export { Sampler, useSurfaceSampler } from './core/Sampler.js';
+export { ComputedAttribute } from './core/ComputedAttribute.js';
+export { Clone } from './core/Clone.js';
+export { MarchingCube, MarchingCubes, MarchingPlane } from './core/MarchingCubes.js';
+export { Decal } from './core/Decal.js';
+export { Svg } from './core/Svg.js';
+export { Gltf } from './core/Gltf.js';
+export { AsciiRenderer } from './core/AsciiRenderer.js';
+export { OrthographicCamera } from './core/OrthographicCamera.js';
+export { PerspectiveCamera } from './core/PerspectiveCamera.js';
+export { CubeCamera } from './core/CubeCamera.js';
+export { DeviceOrientationControls } from './core/DeviceOrientationControls.js';
+export { FlyControls } from './core/FlyControls.js';
+export { MapControls } from './core/MapControls.js';
+export { OrbitControls } from './core/OrbitControls.js';
+export { TrackballControls } from './core/TrackballControls.js';
+export { ArcballControls } from './core/ArcballControls.js';
+export { TransformControls } from './core/TransformControls.js';
+export { PointerLockControls } from './core/PointerLockControls.js';
+export { FirstPersonControls } from './core/FirstPersonControls.js';
+export { CameraControls } from './core/CameraControls.js';
+export { GizmoHelper, useGizmoContext } from './core/GizmoHelper.js';
+export { GizmoViewcube } from './core/GizmoViewcube.js';
+export { GizmoViewport } from './core/GizmoViewport.js';
+export { Grid } from './core/Grid.js';
+export { useCubeTexture } from './core/useCubeTexture.js';
+export { useFBX } from './core/useFBX.js';
+export { useGLTF } from './core/useGLTF.js';
+export { useKTX2 } from './core/useKTX2.js';
+export { useProgress } from './core/useProgress.js';
+export { IsObject, useTexture } from './core/useTexture.js';
+export { useVideoTexture } from './core/useVideoTexture.js';
+export { Stats } from './core/Stats.js';
+export { useDepthBuffer } from './core/useDepthBuffer.js';
+export { useAspect } from './core/useAspect.js';
+export { useCamera } from './core/useCamera.js';
+export { useDetectGPU } from './core/useDetectGPU.js';
+export { useHelper } from './core/useHelper.js';
+export { Bvh, useBVH } from './core/useBVH.js';
+export { useContextBridge } from './core/useContextBridge.js';
+export { useAnimations } from './core/useAnimations.js';
+export { useFBO } from './core/useFBO.js';
+export { useIntersect } from './core/useIntersect.js';
+export { useBoxProjectedEnv } from './core/useBoxProjectedEnv.js';
+export { BBAnchor } from './core/BBAnchor.js';
+export { useTrailTexture } from './core/useTrailTexture.js';
+export { CurveModifier } from './core/CurveModifier.js';
+export { MeshDistortMaterial } from './core/MeshDistortMaterial.js';
+export { MeshWobbleMaterial } from './core/MeshWobbleMaterial.js';
+export { MeshReflectorMaterial } from './core/MeshReflectorMaterial.js';
+export { MeshRefractionMaterial } from './core/MeshRefractionMaterial.js';
+export { MeshTransmissionMaterial } from './core/MeshTransmissionMaterial.js';
+export { PointMaterial, PointMaterialImpl } from './core/PointMaterial.js';
+export { shaderMaterial } from './core/shaderMaterial.js';
+export { SoftShadows, softShadows } from './core/softShadows.js';
+export { Box, Capsule, Circle, Cone, Cylinder, Dodecahedron, Extrude, Icosahedron, Lathe, Octahedron, Plane, Polyhedron, Ring, Sphere, Tetrahedron, Torus, TorusKnot, Tube } from './core/shapes.js';
+export { RoundedBox } from './core/RoundedBox.js';
+export { ScreenQuad } from './core/ScreenQuad.js';
+export { Center } from './core/Center.js';
+export { Bounds, useBounds } from './core/Bounds.js';
+export { CameraShake } from './core/CameraShake.js';
+export { Float } from './core/Float.js';
+export { Stage } from './core/Stage.js';
+export { Backdrop } from './core/Backdrop.js';
+export { Shadow } from './core/Shadow.js';
+export { Caustics } from './core/Caustics.js';
+export { ContactShadows } from './core/ContactShadows.js';
+export { AccumulativeShadows, RandomizedLight, accumulativeContext } from './core/AccumulativeShadows.js';
+export { Reflector } from './core/Reflector.js';
+export { SpotLight, SpotLightShadow } from './core/SpotLight.js';
+export { Environment, EnvironmentCube, EnvironmentMap, EnvironmentPortal, useEnvironment } from './core/Environment.js';
+export { Lightformer } from './core/Lightformer.js';
+export { Sky, calcPosFromAngles } from './core/Sky.js';
+export { Stars } from './core/Stars.js';
+export { Cloud } from './core/Cloud.js';
+export { Sparkles } from './core/Sparkles.js';
+export { useMatcapTexture } from './core/useMatcapTexture.js';
+export { useNormalTexture } from './core/useNormalTexture.js';
+export { Point, Points, PointsBuffer, PositionPoint } from './core/Points.js';
+export { Instance, Instances, Merged } from './core/Instances.js';
+export { Segment, SegmentObject, Segments } from './core/Segments.js';
+export { Detailed } from './core/Detailed.js';
+export { Preload } from './core/Preload.js';
+export { BakeShadows } from './core/BakeShadows.js';
+export { meshBounds } from './core/meshBounds.js';
+export { AdaptiveDpr } from './core/AdaptiveDpr.js';
+export { AdaptiveEvents } from './core/AdaptiveEvents.js';
+export { PerformanceMonitor, usePerformanceMonitor } from './core/PerformanceMonitor.js';
+export { RenderTexture } from './core/RenderTexture.js';
+export { Mask, useMask } from './core/Mask.js';
+export { Hud } from './core/Hud.js';
+export { View } from './web/View.js';
+export { PivotControls, calculateScaleFactor } from './web/pivotControls/index.js';
